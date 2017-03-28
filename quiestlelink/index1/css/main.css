@@ -212,7 +212,7 @@ h1 {
 }
 #content img {
   display: block;
-  max-width: 80%;
+  width: 80%;
   margin: 0 auto;
 }
 .article_close {
@@ -496,10 +496,4 @@ h1 {
 #license a {
   text-decoration: none;
   color: white
-}
-.article_content h1 {
-    font-size: 2em;
-    margin-left: 0;
-    font-weight: 900;
-    border-bottom: 1px solid #eee;
 }
