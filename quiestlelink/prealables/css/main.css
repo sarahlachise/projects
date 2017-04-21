@@ -35,7 +35,7 @@ html {
     /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#85a728', endColorstr='#769620',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 
-  background-color: black;
+  background-color:black;
   background-size: cover;
 }
 body:fullscreen {
