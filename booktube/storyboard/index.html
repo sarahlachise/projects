@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <meta charset="utf-8" />
+    <meta property="og:title" content="storyboard"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:image" content="http://xia.dane.ac-versailles.fr/img/logo.jpg"/>
+    <title>storyboard</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script src="js/LAB.min.js"></script>
+</head>
+<body id="image-active">
+    <div id="loader">
+        <div id="splash">
+            <p><img src="img/xia.png" alt="xia"/></p>
+            <div id="progressbar-wrap">
+                <div class="meter">
+                    <span id="progressbar"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="container">
+        <div id="detect"></div>
+        <header>
+            <h1 id="title">storyboard</h1>
+            <a class="meta-doc" href="#" title="information générale"></a>
+            <a class="infos" href="#" title="à propos"></a>
+        </header>
+        <section id="content" ><img class="article_close" src="img/close.png" alt="close"/><article class="detail_content" id="general">
+  <h1>Description</h1>
+  <p>XIA - DANE Versailles</p>
+</article>
+<article class="detail_content" data-state="full" id="article-0">
+  <h1>Introduction</h1>
+  <div>Dans l'introduction, souhaitez la bienvenue au spectateur sur votre chaîne et <b>annoncez le sujet du jour.</b> <br/>
+<br/>
+Déclinez les éléments clés du livre que vous présentez. <br/>
+<br/>
+<b>Conseil : </b> Vous pouvez tourner en une seule fois la totalité de votre intervention. Vous n'aurez ensuite qu'à tourner les plans spécifiques et à les incruster dans la vidéo. </div>
+</article>
+<article class="detail_content" data-state="full" id="article-1">
+  <h1>Précision</h1>
+  <div>Le gros plan <b>attire l'attention du spectateur.</b> C'est l'occasion de répéter une information essentielle sur le livre : son auteur, son titre, sa date... Un élément que vous voulez que le spectateur retienne avant tout. </div>
+</article>
+<article class="detail_content" data-state="full" id="article-2">
+  <h1>Suite présentation.</h1>
+  <div>Ceci est la suite du plan n°1. Vous continuez votre présentation générale de l'ouvrage.</div>
+</article>
+<article class="detail_content" data-state="full" id="article-3">
+  <h1>Explication n°1</h1>
+  <div>Afin d'<b>approfondir une question</b>, vous pouvez changer de plan. <br/>
+Cela peut être pour expliquer ce qui vous a plu dans l'ouvrage ou définir un terme que vous venez de prononcer ou ajouter des précisions.C'est un peu la <b>note de bas de page</b> de votre vidéo.</div>
+</article>
+<article class="detail_content" data-state="full" id="article-4">
+  <h1>Transition</h1>
+  <div>C'est le moment de clore votre explication et de vous dirigez vers une nouvelle idée à développer.</div>
+</article>
+<article class="detail_content" data-state="full" id="article-5">
+  <h1>Explication n°2</h1>
+  <div>Vous pouvez ici aborder une 2ème idée, concept, approfondissement.</div>
+</article>
+<article class="detail_content" data-state="full" id="article-6">
+  <h1>Conclusion</h1>
+  <div>Concluez votre présentation.</div>
+</article>
+<article class="detail_content" data-state="full" id="article-7">
+  <h1>Like</h1>
+  <div>Adressez un dernier message au spectateur pour qu'il like votre vidéo et/ou qu'il s'abonne à votre chaîne.Le gros plan leur permettra de se sentir plus concernés.</div>
+</article>
+</section>
+        <div id="canvas"></div>
+
+    </div>
+    <footer class="overlay" id="rights">
+        <section id="popup">
+            <img id="popup_close" src="img/close.png" alt="close"/>
+            <article id="popup_text">
+                <img src="img/xia.png" alt="xia" />
+                <p></p>
+            </article>
+        </section>
+    </footer>
+    
+    <script>
+        var loadLibs = function() {
+            var lazyDatas = "datas/data.js";
+            var embedded_scripts = [];
+            var progressbar = document.getElementById("progressbar");
+            var updateProgressbar = function(i) {
+                var percentage = Math.floor((100 / embedded_scripts.length) * i);
+                progressbar.style.width = percentage + "%";
+                if (i + 1 < embedded_scripts.length) {
+                    $LAB.script(embedded_scripts[i+1]).wait(function(){
+                       updateProgressbar(i+1);
+                    });
+                }
+                else {
+                    $LAB.script(embedded_scripts[i+1]);
+                }
+            };
+
+            embedded_scripts.push("js/kinetic.min.js");
+            if (lazyDatas !== "") embedded_scripts.push(lazyDatas);
+            embedded_scripts.push("js/jquery.min.js");
+            embedded_scripts.push("js/git-sha1.min.js");
+            embedded_scripts.push("js/hooks.js");
+            embedded_scripts.push("js/xia.js");
+
+            $LAB.setGlobalDefaults({CacheBust:true});
+            $LAB.script(embedded_scripts[0]).wait(function(){
+                updateProgressbar(0);
+            });
+        }
+
+        document.body.onload = loadLibs;
+    </script>
+</body>
+</html>
