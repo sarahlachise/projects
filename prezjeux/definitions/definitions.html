@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="author" content="Sarah Lachise" />
+    <meta name="keywords" content="" />
+    <meta charset="utf-8" />
+    <meta property="og:title" content="Définitions"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:image" content="http://xia.dane.ac-versailles.fr/img/logo.jpg"/>
+    <title>Définitions</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script src="js/LAB.min.js"></script>
+</head>
+<body id="image-active">
+    <div id="loader">
+        <div id="splash">
+            <p><img src="img/xia.png" alt="xia"/></p>
+            <div id="progressbar-wrap">
+                <div class="meter">
+                    <span id="progressbar"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="container">
+        <div id="detect"></div>
+        <header>
+            <h1 id="title">Définitions</h1>
+            <a class="meta-doc" href="#" title="information générale"></a>
+            <a class="infos" href="#" title="à propos"></a>
+        </header>
+        <div id="canvas"></div>
+        <section id="content" class="overlay"><article id="general">
+<img class="article_close" src="img/close.png" alt="close"/>  <h1>Description</h1>
+  <p>XIA - DANE Versailles</p>
+</article>
+<article data-state="full" id="article-0">
+<img class="article_close" src="img/close.png" alt="close"/>  <h1>Les serious game</h1>
+  <div>Ou "jeux sérieux"<br/>
+<br/>
+Il s'agit de <b>jeux spécialement conçus dans un objectif d'apprentissage.</b> <br/>
+<br/>
+Exemple : <b>Mathador</b> : jeu conçu par le réseau Canopé pour motiver les élèves à faire du calcul mental. <br/>
+<br/>
+<b>Atouts</b> : l'aspect pédagogique est indéniable, souvent travaillé avec des enseignants.<br/>
+<br/>
+<b>Limites</b> : le manque de moyens conduit à des gameplays et des graphismes parfois peu adapté à des joueurs. L'élève n'a, souvent, pas l'impression de jouer. <br/>
+<br/>
+</div>
+</article>
+<article data-state="full" id="article-1">
+<img class="article_close" src="img/close.png" alt="close"/>  <h1>Le serious gaming</h1>
+  <div>C'est l'utilisation de <b>jeux déjà existants</b> à des fins pédagogiques. <br/>
+<br/>
+Exemple : <b>Minecraft</b>. Ce jeu existe depuis 2011 et a une immense communauté de joueurs. Certains enseignants l'utilisent en technologie ou EMC pour aborder des notions du programme. <br/>
+<br/>
+<b>Atouts</b>: Ces jeux ont été réalisés par de vraies boîtes de jeux vidéos. Les moyens ont donc été réellement mis sur le gameplay. <br/>
+<br/>
+<b>Limites</b>: Tous les jeux ne sont pas exploitables en classe. Ils demandent une vraie connaissance du jeu par l'enseignant. <br/>
+</div>
+</article>
+<article data-state="full" id="article-2">
+<img class="article_close" src="img/close.png" alt="close"/>  <h1>Gamification</h1>
+  <div>C'est <b>l'utilisation des concepts de jeux</b> dans n'importe quelle activité. <br/>
+<br/>
+Exemple : <b>Classcraft</b> : propose une plateforme en ligne qui met à disposition des avatars, des badges, des compétences, des bonus etc. Cette plateforme transforme l'expérience de classe en jeu de rôle. <br/>
+<br/>
+<b>Atouts</b>: Permet à l'enseignant de moduler son année, sa séquence comme il l'entend du point de vue du contenu tout en utilisant les concepts de jeux pour motiver et améliorer la collaboration entre élèves. <br/>
+<br/>
+<b>Limites</b>: Chronophage en temps de préparation.</div>
+</article>
+</section>
+    </div>
+    <footer class="overlay" id="rights">
+        <section id="popup">
+            <img id="popup_close" src="img/close.png" alt="close"/>
+            <article id="popup_text">
+                <img src="img/xia.png" alt="xia" />
+                <p>Sarah Lachise<br/>Mars2017<br/></p>
+            </article>
+        </section>
+    </footer>
+    
+    <script>
+        var loadLibs = function() {
+            var lazyDatas = "datas/data.js";
+            var embedded_scripts = [];
+            var progressbar = document.getElementById("progressbar");
+            var updateProgressbar = function(i) {
+                var percentage = Math.floor((100 / embedded_scripts.length) * i);
+                progressbar.style.width = percentage + "%";
+                if (i + 1 < embedded_scripts.length) {
+                    $LAB.script(embedded_scripts[i+1]).wait(function(){
+                       updateProgressbar(i+1);
+                    });
+                }
+                else {
+                    $LAB.script(embedded_scripts[i+1]);
+                }
+            };
+
+            embedded_scripts.push("js/kinetic.min.js");
+            if (lazyDatas !== "") embedded_scripts.push(lazyDatas);
+            embedded_scripts.push("js/jquery.min.js");
+            embedded_scripts.push("js/git-sha1.min.js");
+            embedded_scripts.push("js/hooks.js");
+            embedded_scripts.push("js/xia.js");
+
+            $LAB.setGlobalDefaults({CacheBust:true});
+            $LAB.script(embedded_scripts[0]).wait(function(){
+                updateProgressbar(0);
+            });
+        }
+
+        document.body.onload = loadLibs;
+    </script>
+
+</body>
+</html>

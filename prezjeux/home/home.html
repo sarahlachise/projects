@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <meta charset="utf-8" />
+    <meta property="og:title" content="Présentation Jeux et gamification "/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:image" content="http://xia.dane.ac-versailles.fr/img/logo.jpg"/>
+    <title>Présentation Jeux et gamification </title>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script src="js/LAB.min.js"></script>
+</head>
+<body id="image-active">
+    <div id="loader">
+        <div id="splash">
+            <p><img src="img/xia.png" alt="xia"/></p>
+            <div id="progressbar-wrap">
+                <div class="meter">
+                    <span id="progressbar"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="container">
+        <header>
+            <h1 id="title">Présentation Jeux et gamification </h1>
+            <a class="infos" href="#" title="à propos"></a>
+        </header>
+        <section id="content"><article class="message_success" id="message_success" data-score="0">
+<img id="popup_toggle" src="img/hide.png" alt="toggle"/>
+  <div id="message_success_content">C'est gagné !</div>
+</article>
+<article class="message_success" id="message_success2" data-score="0">
+<img id="popup_toggle2" src="img/hide.png" alt="toggle"/>
+  <div id="message_success_content2">C'est gagné !</div>
+</article>
+<article class="detail_content" data-kinetic_id="image4450" data-tooltip="" data-options=" direct-link " id="article-0">
+  <h1>../contexte/contexte.html</h1>
+  <p><p>
+</article>
+<article class="detail_content" data-kinetic_id="image4461" data-tooltip="" data-options=" direct-link " id="article-1">
+  <h1>../definitions/definitions.html</h1>
+  <p><p>
+</article>
+<article class="detail_content" data-kinetic_id="image4472" data-tooltip="" data-options=" direct-link " id="article-2">
+  <h1>../sources/sources.html</h1>
+  <p><p>
+</article>
+<article class="detail_content" data-kinetic_id="image4483" data-tooltip="" data-options=" direct-link " id="article-3">
+  <h1>../atoutslimites/atoutslimites.html</h1>
+  <p><p>
+</article>
+<article class="detail_content" data-kinetic_id="image4540" data-tooltip="" data-options="" id="article-4">
+  <h1></h1>
+  <p><p>
+</article>
+</section>
+        <div id="canvas"></div>
+    </div>
+    <footer class="overlay" id="rights">
+        <section id="popup">
+            <img id="popup_close" src="img/close.png" alt="close"/>
+            <article id="popup_text">
+                <img src="img/xia.png" alt="xia" />
+                <p></p>
+            </article>
+        </section>
+        <section id="popup_intro">
+            <img id="popup_close_intro" src="img/close.png" alt="close"/>
+            <article id="popup_text_intro">
+                <p></p>
+            </article>
+        </section>
+    </footer>
+    
+    <script>
+        var loadLibs = function() {
+            var lazyDatas = "datas/data.js";
+            var embedded_scripts = [];
+            var progressbar = document.getElementById("progressbar");
+            var updateProgressbar = function(i) {
+                var percentage = Math.floor((100 / embedded_scripts.length) * i);
+                progressbar.style.width = percentage + "%";
+                if (i + 1 < embedded_scripts.length) {
+                    $LAB.script(embedded_scripts[i+1]).wait(function(){
+                       updateProgressbar(i+1);
+                    });
+                }
+                else {
+                    $LAB.script(embedded_scripts[i+1]);
+                }
+            };
+
+            embedded_scripts.push("js/kinetic-xia.min.js");
+            if (lazyDatas !== "") embedded_scripts.push(lazyDatas);
+            embedded_scripts.push("js/jquery.min.js");
+            embedded_scripts.push("js/git-sha1.min.js");
+            embedded_scripts.push("js/hooks.js");
+            embedded_scripts.push("js/xia.js");
+
+            $LAB.setGlobalDefaults({CacheBust:true});
+            $LAB.script(embedded_scripts[0]).wait(function(){
+                updateProgressbar(0);
+            });
+        }
+
+        document.body.onload = loadLibs;
+    </script>
+</body>
+</html>
