@@ -1,0 +1,838 @@
+﻿@charset "UTF-8";
+
+/* Feuille de styles CSS de VANGOGH-v2.2.fet
+   Feuille de styles générée avec FET 5.37.5 le 27/02/2019 17:53 */
+
+/* Pour faire un saut de page uniquement après chaque second planning, supprimer "page-break-before: always;" dans "table.even_table". */
+/* Supprimer "page-break-before: always;" dans "table.even_table" et dans "table.odd_table" pour passer les sauts de page. */
+/* Pour masquer un élément, écrivez simplement la phrase suivante sous l'élément : "display:none;" (sans guillemet). */
+
+p.back {
+  margin-top: 4ex;
+  margin-bottom: 5ex;
+}
+
+table {
+  text-align: center;
+  page-break-inside: avoid;
+}
+
+table.odd_table {
+  page-break-before: always;
+}
+
+table.even_table {
+  page-break-before: always;
+}
+
+table.detailed {
+  margin-left:auto; margin-right:auto;
+  text-align: center;
+  border: 0px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+caption {
+
+}
+
+thead {
+
+}
+
+/* Certains programmes importent incorrectement "tfoot". Donc nous utilisons "tr.foot" au lieu de "tfoot". */
+
+tr.foot {
+
+}
+
+tbody {
+font-family: sans-serif;
+}
+
+th {
+
+}
+
+td {
+background-color: #F7F6F6;
+}
+
+td.detailed {
+  border: 1px dashed silver;
+  border-bottom: 0;
+  border-top: 0;
+}
+
+th.xAxis {
+/* width: 8em; */
+}
+
+th.yAxis {
+  height: 8ex;
+}
+
+span.s_1 { /* subject MATHS */
+background-color: #3B3B98;
+color:white;
+padding: 0.2em 2.3em 2.3em 2.3em;
+}
+
+span.s_2 { /* subject FRANCAIS */
+background-color:#f6b93b;
+color:white;
+padding: 0.2em 1.8em 2.3em 1.8em;
+}
+
+span.s_3 { /* subject SVT */
+background-color:#78e08f;
+color:white;
+padding: 0.2em 3em 2.3em 3em;
+}
+
+span.s_4 { /* subject PHYS-CHIM */
+background-color:#82589F;
+color:white;
+padding: 0.2em 1em 2.3em 1em;
+}
+
+span.s_5 { /* subject HIST-GEO */
+background-color:#F97F51;
+color:white;
+padding: 0.2em 1.8em 2.3em 1.8em;
+}
+
+span.s_6 { /* subject EPS */
+background-color:#00cec9;
+color:white;
+padding: 2em 3em 4em 3em;
+}
+
+span.s_7 { /* subject MUSIQUE */
+background-color:#FC427B;
+color:white;
+padding: 0.2em 1.8em 2.3em 1.8em;
+}
+
+span.s_8 { /* subject ARTS PLA */
+background-color:#6c5ce7;
+color:white;
+padding: 0.2em 1.8em 2.3em 1.8em;
+}
+
+span.s_9 { /* subject ANG LV1 */
+background-color:#B33771;
+color:white;
+padding: 0.2em 1.8em 2.3em 1.8em;
+}
+
+span.s_10 { /* subject ANG LV2 */
+background-color:#B33771;
+color:white;
+padding: 0.2em 1.8em 2.3em 1.8em;
+}
+
+span.s_11 { /* subject ALLEMAND LV1 */
+background-color:#ff3f34;
+color:white;
+padding: 0.2em 0.8em 2.3em 0.8em;
+}
+
+span.s_12 { /* subject ESP LV2 */
+background-color:#b71540;
+color:white;
+padding: 0.2em 1.8em 2.3em 1.8em;
+}
+
+span.s_13 { /* subject AP MATHS */
+background-color:#3B3B98;
+color:white;
+padding: 0.2em 1.8em 2.3em 1.8em;
+}
+
+span.s_14 { /* subject AP FRA */
+background-color:#f6b93b;
+color:white;
+padding: 0.2em 2.2em 2.3em 2.2em;
+}
+
+span.s_15 { /* subject LATIN */
+background-color:#cd6133;
+color:white;
+padding: 0.2em 1.8em 2.3em 1.8em;
+}
+
+span.s_16 { /* subject TECHNO */
+background-color:#2C3A47;
+color:white;
+padding: 0.2em 1.8em 2.3em 1.8em;
+}
+
+span.s_17 { /* subject VIE DE CLASSE */
+
+}
+
+span.s_18 { /* subject REPAS */
+
+}
+span.s_19 { /* subject SVT A/TECHNO B */
+background:linear-gradient(0.25turn,#78e08f 50%,#2C3A47 50%);
+color:white;
+padding: 0.2em 1em 2.3em 1em;
+}
+
+span.s_20 { /* subject SVT A/PHYS-CHIM B */
+  background:linear-gradient(0.25turn,#78e08f 50%,#82589F 50%);
+  color:white;
+  padding: 0.2em 1em 2.3em 1em;
+}
+
+span.s_21 { /* subject PHYS-CHIM A/SVT B */
+  background:linear-gradient(0.25turn,#82589F 50%,#78e08f 50%);
+  color:white;
+  padding: 0.2em 1em 2.3em 1em;
+}
+
+span.s_22 { /* subject TECHNO A/SVT B */
+  background:linear-gradient(0.25turn,#2C3A47 50%,#78e08f 50%);
+  color:white;
+  padding: 0.2em 1em 2.3em 1em;
+}
+
+span.s_23 { /* subject ESP A/TECHNO B */
+  background:linear-gradient(0.25turn,#b71540 50%,#2C3A47 50%);
+  color:white;
+  padding: 0.2em 1em 2.3em 1em;
+}
+
+span.s_24 { /* subject TECHNO A/ESP B */
+  background:linear-gradient(0.25turn,#2C3A47 50%,#b71540 50%);
+  color:white;
+  padding: 0.2em 1em 2.3em 1em;
+}
+
+span.s_25 { /* subject FRAN A/HIST B */
+  background:linear-gradient(0.25turn,#f6b93b 50%,#F97F51 50%);
+  color:white;
+  padding: 0.2em 1em 2.3em 1em;
+}
+
+span.s_26 { /* subject HIST A/FRAN B */
+  background:linear-gradient(0.25turn,#F97F51 50%,#f6b93b 50%);
+  color:white;
+  padding: 0.2em 1em 2.3em 1em;
+}
+
+span.s_27 { /* subject ESP A/FRAN B */
+
+}
+
+span.s_28 { /* subject FRAN A/ESP B */
+
+}
+
+span.s_29 { /* subject HIST A/TECHNO B */
+
+}
+
+span.s_30 { /* subject TECHNO A/HIST B */
+
+}
+span.s_31 { /* subject FRAN A/TECHNO B */
+  background:linear-gradient(0.25turn,#f6b93b 50%,#2C3A47 50%);
+  color:white;
+  padding: 0.2em 1em 2.3em 1em;
+}
+span.s_32 { /* subject TECHNO A/FRAN B */
+  background:linear-gradient(0.25turn,#2C3A47 50%,#f6b93b 50%);
+  color:white;
+  padding: 0.2em 1em 2.3em 1em;
+}
+
+span.at_1 { /* activity tag EPS */
+display: none;
+}
+
+span.at_2 { /* activity tag SCIENCES */
+display: none;
+}
+
+span.at_3 { /* activity tag TECHNO */
+display: none;
+}
+
+span.at_4 { /* activity tag FRANCAIS */
+display: none;
+}
+
+span.at_5 { /* activity tag MATHS */
+display: none;
+}
+
+span.at_6 { /* activity tag HISTOIRE-GEO */
+display: none;
+}
+
+span.at_7 { /* activity tag LANGUES */
+display: none;
+}
+
+span.at_8 { /* activity tag SELF */
+display: none;
+}
+
+span.ss_2 { /* students set 6E1 */
+
+}
+
+span.ss_5 { /* students set 6E2 */
+
+}
+
+span.ss_10 { /* students set 6E3 */
+
+}
+
+span.ss_15 { /* students set 6E4 */
+
+}
+
+span.ss_18 { /* students set 6EANG-LV1 */
+
+}
+
+span.ss_19 { /* students set 6EALL-LV1 */
+
+}
+
+span.ss_21 { /* students set 5E1 */
+
+}
+
+span.ss_27 { /* students set 5E2 */
+
+}
+
+span.ss_30 { /* students set 5E3 */
+
+}
+
+span.ss_34 { /* students set 5E4 */
+
+}
+
+span.ss_39 { /* students set 5EALL-LV1 */
+
+}
+
+span.ss_40 { /* students set 5ELATIN 5E */
+
+}
+
+span.ss_41 { /* students set 5EESP-LV2 */
+
+}
+
+span.ss_43 { /* students set 4E1 */
+
+}
+
+span.ss_46 { /* students set 4E1ESP-LV2 */
+
+}
+
+span.ss_49 { /* students set 4E2 */
+
+}
+
+span.ss_52 { /* students set 4E2ESP-LV2 */
+
+}
+
+span.ss_55 { /* students set 4EALL-LV1 */
+
+}
+
+span.ss_56 { /* students set 4ELATIN 4E */
+
+}
+
+span.ss_46 { /* students set 4E1ESP-LV2 */
+
+}
+
+span.ss_52 { /* students set 4E2ESP-LV2 */
+
+}
+
+span.ss_59 { /* students set 3E1 */
+
+}
+
+span.ss_62 { /* students set 3E1ESP-LV2 */
+
+}
+
+span.ss_65 { /* students set 3E2 */
+
+}
+
+span.ss_67 { /* students set 3E2ESP-LV2 */
+
+}
+
+span.ss_70 { /* students set 3E3 */
+
+}
+
+span.ss_74 { /* students set 3E4 */
+
+}
+
+span.ss_77 { /* students set 3EALL-LV1 */
+
+}
+
+span.ss_78 { /* students set 3ELATIN 3E */
+
+}
+
+span.ss_62 { /* students set 3E1ESP-LV2 */
+
+}
+
+span.ss_67 { /* students set 3E2ESP-LV2 */
+
+}
+
+span.ss_80 { /* students set UPE2A */
+
+}
+
+span.t_1 { /* teacher ABE SABRINA */
+
+}
+
+span.t_2 { /* teacher AMA MAURICE */
+
+}
+
+span.t_3 { /* teacher BAN RACHID */
+
+}
+
+span.t_4 { /* teacher BEN AYHAM */
+
+}
+
+span.t_5 { /* teacher BON KAREN */
+
+}
+
+span.t_6 { /* teacher BRO JESSICA */
+
+}
+
+span.t_7 { /* teacher CHA COLIN */
+
+}
+
+span.t_8 { /* teacher COM GISELE */
+
+}
+
+span.t_9 { /* teacher DEB EMMANUELLE */
+
+}
+
+span.t_10 { /* teacher DUM LAURA */
+
+}
+
+span.t_11 { /* teacher FON MATHIEU */
+
+}
+
+span.t_12 { /* teacher GHA LEILA */
+
+}
+
+span.t_13 { /* teacher GOU ANTOINE */
+
+}
+
+span.t_14 { /* teacher GUI MARC */
+
+}
+
+span.t_15 { /* teacher HAD KAMEL */
+
+}
+
+span.t_16 { /* teacher HAR SARAH */
+
+}
+
+span.t_17 { /* teacher JAY SAGARIKA */
+
+}
+
+span.t_18 { /* teacher JOB MARINE */
+
+}
+
+span.t_19 { /* teacher LAI SYBILLE */
+
+}
+
+span.t_20 { /* teacher LAU GHYSLAINE */
+
+}
+
+span.t_21 { /* teacher LEF NATHALIE */
+
+}
+
+span.t_22 { /* teacher LEM MAGALI */
+
+}
+
+span.t_23 { /* teacher MAH SAMIR */
+
+}
+
+span.t_24 { /* teacher PAL MARTINE */
+
+}
+
+span.t_25 { /* teacher PER ANTOINE */
+
+}
+
+span.t_26 { /* teacher PRE DIANA */
+
+}
+
+span.t_27 { /* teacher RAN HALIM */
+
+}
+
+span.t_28 { /* teacher ROC MICHAEL */
+
+}
+
+span.t_29 { /* teacher SAN SABRINA */
+
+}
+
+span.t_30 { /* teacher TOZ ERIKA */
+
+}
+
+span.t_31 { /* teacher VAI SOLENE */
+
+}
+
+span.r_1 { /* room CDI */
+
+}
+
+span.r_2 { /* room GYM */
+
+}
+
+span.r_3 { /* room GYM2 */
+
+}
+
+span.r_4 { /* room GYM3 */
+
+}
+
+span.r_5 { /* room LAB1 */
+
+}
+
+span.r_6 { /* room LAB2 */
+
+}
+
+span.r_7 { /* room LAB3 */
+
+}
+
+span.r_8 { /* room PERM1 */
+
+}
+
+span.r_9 { /* room PERM2 */
+
+}
+
+span.r_10 { /* room S01 */
+
+}
+
+span.r_11 { /* room S02 */
+
+}
+
+span.r_12 { /* room S03 */
+
+}
+
+span.r_13 { /* room S04 */
+
+}
+
+span.r_14 { /* room S05 */
+
+}
+
+span.r_15 { /* room S06 */
+
+}
+
+span.r_16 { /* room S07 */
+
+}
+
+span.r_17 { /* room S08 */
+
+}
+
+span.r_18 { /* room S09 */
+
+}
+
+span.r_19 { /* room S10 */
+
+}
+
+span.r_20 { /* room S11 */
+
+}
+
+span.r_21 { /* room S12 */
+
+}
+
+span.r_22 { /* room S13 */
+
+}
+
+span.r_23 { /* room S14 */
+
+}
+
+span.r_24 { /* room S15 */
+
+}
+
+span.r_25 { /* room S16 */
+
+}
+
+span.r_26 { /* room Self 1 */
+
+}
+
+span.r_27 { /* room Self 10 */
+
+}
+
+span.r_28 { /* room Self 11 */
+
+}
+
+span.r_29 { /* room Self 12 */
+
+}
+
+span.r_30 { /* room Self 13 */
+
+}
+
+span.r_31 { /* room Self 14 */
+
+}
+
+span.r_32 { /* room Self 2 */
+
+}
+
+span.r_33 { /* room Self 3 */
+
+}
+
+span.r_34 { /* room Self 4 */
+
+}
+
+span.r_35 { /* room Self 5 */
+
+}
+
+span.r_36 { /* room Self 6 */
+
+}
+
+span.r_37 { /* room Self 7 */
+
+}
+
+span.r_38 { /* room Self 8 */
+
+}
+
+span.r_39 { /* room Self 9 */
+
+}
+
+span.r_40 { /* room TECH1 */
+
+}
+
+span.r_41 { /* room TECH2 */
+
+}
+
+span.r_42 { /* room TECH3 */
+
+}
+
+span.r_43 { /* room Self 15 */
+
+}
+
+span.r_44 { /* room Self 16 */
+
+}
+
+span.r_45 { /* room Self 17 */
+
+}
+
+span.subject {
+
+}
+
+span.activitytag {
+
+}
+
+span.empty {
+  color: gray;
+}
+
+td.empty {
+  border-color:silver;
+  border-right-style:none;
+  border-bottom-style:none;
+  border-left-style:dotted;
+  border-top-style:dotted;
+}
+
+span.notAvailable {
+  color: gray;
+}
+
+td.notAvailable {
+  border-color:silver;
+  border-right-style:none;
+  border-bottom-style:none;
+  border-left-style:dotted;
+  border-top-style:dotted;
+}
+
+span.break {
+  color: gray;
+}
+
+td.break {
+  border-color:silver;
+  border-right-style:none;
+  border-bottom-style:none;
+  border-left-style:dotted;
+  border-top-style:dotted;
+}
+
+tr.studentsset, div.studentsset {
+
+}
+
+tr.teacher, div.teacher {
+
+}
+
+tr.room, div.room {
+
+}
+
+tr.line0, div.line0 {
+  font-size: smaller;
+}
+
+tr.line1, div.line1 {
+
+}
+
+tr.line2, div.line2 {
+  font-size: smaller;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+tr.line3, div.line3 {
+  font-size: smaller;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Mettre en forme les périodes libres des enseignants */
+
+div.DESCRIPTION {
+  text-align: left;
+  font-size: smaller;
+}
+
+div.TEACHER_HAS_SINGLE_GAP {
+  color: black;
+}
+
+div.TEACHER_HAS_BORDER_GAP {
+  color: gray;
+}
+
+div.TEACHER_HAS_BIG_GAP {
+  color: silver;
+}
+
+div.TEACHER_MUST_COME_EARLIER {
+  color: purple;
+}
+
+div.TEACHER_MUST_COME_MUCH_EARLIER {
+  font-size: smaller;
+  color: fuchsia;
+}
+
+div.TEACHER_MUST_STAY_LONGER {
+  color: teal;
+}
+
+div.TEACHER_MUST_STAY_MUCH_LONGER {
+  font-size: smaller;
+  color: aqua;
+}
+
+div.TEACHER_HAS_A_FREE_DAY {
+  font-size: smaller;
+  color: red;
+}
+
+div.TEACHER_IS_NOT_AVAILABLE {
+  font-size: smaller;
+  color: olive;
+}
+
+/* Fin de fichier. */
